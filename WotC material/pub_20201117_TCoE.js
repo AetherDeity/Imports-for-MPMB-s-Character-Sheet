@@ -1,4 +1,4 @@
-var iFileName = "Tasha's Cauldron of Everything Spells [Transcribed by Cosaur].js";
+var iFileName = "pub_20201117_TCoE.js";
 
 SourceList["TCoE"] = {
 	name : "Tasha's Cauldron of Everything",
@@ -45,7 +45,7 @@ AddSubClass("bard", "college of eloquence-tcoe", {
 			minlevel : 6,
 			usages : "Charisma modifier per ",
 			usagescalc : "event.value = Math.max(1, What('Cha Mod'));",
-			recovery : "long rest"
+			recovery : "long rest",
 			action : ["action", ""],
 			description : desc([
 				"As an action, one or more creatures within 60 ft of me can magically understand me for 1 hour",
