@@ -3,7 +3,7 @@ var iFileName = "pub_20201117_TCoE.js";
 SourceList["TCoE"] = {
 	name : "Tasha's Cauldron of Everything",
 	abbreviation : "TCoE",
-	group : "Wizards of the Coast",
+	group : "Primary Sources",
 	url : "https://www.dndbeyond.com/sources/tcoe"
 };
 
@@ -67,20 +67,33 @@ AddSubClass("bard", "college of eloquence-tcoe", {
 		}
 	}
 });
-	
 
-SpellsList["blade of disaster"] = { 
-	name : "Blade of Disaster", 
-	classes : ["sorcerer", "warlock", "wizard"], 
-	source : ["T", 106], 
-	level : 9, 
-	school : "Conj", 
-	time : "1 bns", 
-	range : "60 ft", 
-	components : "V,S", 
-	duration : "Conc, 1 min", 
-	description : "Create weapon; spell attack 4d12 force; crit 18+; 3 * crit damage; bns to move 30ft 2 attacks", 
-	descriptionFull : "You create a blade-shaped planar rift about 3 feet long in an unoccupied space you can see within range. The blade lasts for the duration. When you cast this spell, you can make up to two melee spell attacks with the blade, each one against a creature, loose object, or structure within 5 feet of the blade. On a hit, the target takes 4d12 force damage. This attack scores a critical hit if the number on the d20 is 18 or higher. On a critical hit, the blade deals an extra 8d12 force damage (for a total of 12d12 force damage)." + "\n   " + "As a bonus action on your turn, you can move the blade up to 30 feet to an unoccupied space you can see and then make up to two melee spell attacks with it again." + "\n   " + "The blade can harmlessly pass through any barrier, including a wall of force.", 
+FeatsList["telepathic-tcoe"] = {
+	name : "Telepathic",
+	source : ["TCoE", 81],
+	descriptionFull : "You awaken the ability to mentally connect with others, granting you the following benefits:\n \u2022 Increase your Intelligence, Wisdom, or Charisma score by 1, to a max of 20.\n \u2022 You can speak telepathically to any creature you can see within 60 feet of you. Your telepathic utterances are in a language you know, and the creature understands you only if it knows that language. Your communication doesn't give the creature the ability to respond to you telepathically. \n \u2022 You can cast the detect thoughts spell, requiring no spell slot or components, and you must finish a long rest before you can cast it this way again. Your spellcasting ability for the spell is the ability increased by this feat. If you have spell slots of 2nd level or higher, you can cast this spell with them.",
+	description : "I can speak a language I know telepathically to any creature I can see within 60 ft, it understands if it knows the language. I can cast Detect Thoughts, without expending a spell slot, once per long rest. The skill increased by this feat is my spell casting ability. [+1 Intelligence, Wisdom, or Charisma]",
+	scorestxt : "+1 Intelligence, Wisdom, or Charisma",
+	spellcastingBonus : [{
+		name: "Once per long rest",
+		spells : ["detect thoughts"],
+		selection : ["detect thoughts"],
+		firstCol : 'oncelr'
+	}]
+}
+
+SpellsList["blade of disaster"] = {
+	name : "Blade of Disaster",
+	classes : ["sorcerer", "warlock", "wizard"],
+	source : ["T", 106],
+	level : 9,
+	school : "Conj",
+	time : "1 bns",
+	range : "60 ft",
+	components : "V,S",
+	duration : "Conc, 1 min",
+	description : "Create weapon; spell attack 4d12 force; crit 18+; 3 * crit damage; bns to move 30ft 2 attacks",
+	descriptionFull : "You create a blade-shaped planar rift about 3 feet long in an unoccupied space you can see within range. The blade lasts for the duration. When you cast this spell, you can make up to two melee spell attacks with the blade, each one against a creature, loose object, or structure within 5 feet of the blade. On a hit, the target takes 4d12 force damage. This attack scores a critical hit if the number on the d20 is 18 or higher. On a critical hit, the blade deals an extra 8d12 force damage (for a total of 12d12 force damage)." + "\n   " + "As a bonus action on your turn, you can move the blade up to 30 feet to an unoccupied space you can see and then make up to two melee spell attacks with it again." + "\n   " + "The blade can harmlessly pass through any barrier, including a wall of force.",
 };
 
 SpellsList["booming blade-tcoe"] = {
